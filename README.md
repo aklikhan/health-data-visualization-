@@ -26,7 +26,7 @@ Interactive scatterplot visualization of health survey data using D3.js.
 
 \## Live Demo
 
-\[View the live visualization](https://YOUR\_USERNAME.github.io/health-data-visualization/)
+\[View the live visualization](https://aklikhan.github.io/health-data-visualization/)
 
 
 
