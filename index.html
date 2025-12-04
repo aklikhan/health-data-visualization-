@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Survey Data Visualization</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1> Health Survey Data Explorer</h1>
+        <p class="subtitle">Interactive visualization of BMI, Physical Health, and Mental Health relationships</p>
+        
+        <div class="controls">
+            <div class="control-group">
+                <label for="xAxis">X-Axis:</label>
+                <select id="xAxis">
+                    <option value="_BMI5">BMI</option>
+                    <option value="PHYSHLTH">Physical Health (days)</option>
+                    <option value="MENTHLTH">Mental Health (days)</option>
+                </select>
+            </div>
+            
+            <div class="control-group">
+                <label for="yAxis">Y-Axis:</label>
+                <select id="yAxis">
+                    <option value="PHYSHLTH">Physical Health (days)</option>
+                    <option value="_BMI5">BMI</option>
+                    <option value="MENTHLTH">Mental Health (days)</option>
+                </select>
+            </div>
+            
+            <div class="control-group">
+                <label for="colorBy">Color By:</label>
+                <select id="colorBy">
+                    <option value="GENHLTH">General Health</option>
+                    <option value="SEXVAR">Sex</option>
+                    <option value="_TOTINDA">Physical Activity</option>
+                    <option value="SMOKE100">Smoking Status</option>
+                </select>
+            </div>
+            
+            <div class="control-group">
+                <label>&nbsp;</label>
+                <button id="resetBtn">Reset View</button>
+            </div>
+        </div>
+
+        <div id="chart"></div>
+        <div class="tooltip"></div>
+
+        <div class="stats">
+            <div class="stat-card">
+                <div class="stat-label">Total Records</div>
+                <div class="stat-value" id="totalRecords">0</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">Average BMI</div>
+                <div class="stat-value" id="avgBMI">0</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">Avg Physical Health Days</div>
+                <div class="stat-value" id="avgPhys">0</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">Avg Mental Health Days</div>
+                <div class="stat-value" id="avgMent">0</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
